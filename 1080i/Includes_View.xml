@@ -360,12 +360,9 @@
                 <visible>Integer.IsGreater(Container($PARAM[id]).NumItems,0) | Container($PARAM[id]).IsUpdating</visible>
                 <nested />
                 <control type="group">
-                    <top>52</top>
-                    <height>item_cast_height</height>
-                    <include content="Defs_BusySpinner">
-                        <param name="label" value="$LOCALIZE[31428]..." />
-                        <param name="textcolor" value="main_fg_100" />
-                    </include>
+                    <include>Defs_SmallBusySpinner</include>
+                    <top>8</top>
+                    <left>14</left>
                     <visible>Container($PARAM[id]).IsUpdating</visible>
                     <visible>$PARAM[spinner-visible]</visible>
                 </control>
