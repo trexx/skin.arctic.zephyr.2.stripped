@@ -96,11 +96,6 @@ msgid "Mirror mediainfo viewtypes"
 msgstr ""
 
 #: /shortcuts/overrides.xml
-msgctxt "#31017"
-msgid "Smart Shortcuts"
-msgstr ""
-
-#: /shortcuts/overrides.xml
 msgctxt "#31018"
 msgid "Common Shortcut"
 msgstr ""
@@ -895,11 +890,6 @@ msgstr ""
 
 msgctxt "#31181"
 msgid "Select icon"
-msgstr ""
-
-#: /shortcuts/overrides.xml
-msgctxt "#31182"
-msgid "Additional Widgets"
 msgstr ""
 
 #: /shortcuts/overrides.xml
