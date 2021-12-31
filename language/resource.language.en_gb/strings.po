@@ -927,11 +927,6 @@ msgid "Random Albums"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31188"
-msgid "Automatically switch color theme based on time (Light 6am - Dark 6pm)"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31189"
 msgid "Geometric pattern on panels"
 msgstr ""

@@ -10,10 +10,6 @@
         <value>panel_fg_70</value>
     </variable>
 
-    <variable name="Defs_ThemeSwitcher_StartTime">
-        <value>06:00</value>
-    </variable>
-    
     <include name="Defs_PauseAtEnd_Value">
         <pauseatend>$PARAM[time]</pauseatend>
     </include>
