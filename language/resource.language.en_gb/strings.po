@@ -115,11 +115,6 @@ msgctxt "#31021"
 msgid "Colors"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31022"
-msgid "Animated artwork"
-msgstr ""
-
 #: /1080i/Includes_Items.xml
 msgctxt "#31023"
 msgid "Fullscreen"

@@ -537,14 +537,6 @@
                         <onclick>ReloadSkin()</onclick>
                     </control>
 
-                    <control type="radiobutton" id="19401">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9004)</visible>
-                        <label>$LOCALIZE[31022]</label>
-                        <include>Defs_Settings_Button</include>
-                        <selected>Skin.HasSetting(SkinHelper.EnableAnimatedPosters)</selected>
-                        <onclick>Skin.ToggleSetting(SkinHelper.EnableAnimatedPosters)</onclick>
-                    </control>
-
                     <!-- ================= -->
                     <!-- Video / Music OSD -->
                     <!-- ================= -->
