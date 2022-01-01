@@ -768,11 +768,6 @@ msgctxt "#31157"
 msgid "Artist's Albums"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31158"
-msgid "Automatically open visualisation after starting a song"
-msgstr ""
-
 #: /1080i/Includes_Labels.xml
 msgctxt "#31159"
 msgid "Video Sources"
