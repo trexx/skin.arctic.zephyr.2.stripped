@@ -25,5 +25,7 @@
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetString(widgetTarget,videos)</onload>
     <onload condition="!Skin.HasSetting(SkinInit)">Skin.SetBool(SkinInit)</onload>
 
+    <onload>ReplaceWindow($INFO[System.StartupWindow])</onload>
+
     <controls />
 </window>
