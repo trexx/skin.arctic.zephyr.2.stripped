@@ -80,11 +80,6 @@ msgctxt "#31013"
 msgid "Selection box"
 msgstr ""
 
-#: /1080i/MyVideoNav.xml
-msgctxt "#31014"
-msgid "Extra fanart"
-msgstr ""
-
 #: /1080i/SkinSettings.xml
 msgctxt "#31015"
 msgid "Choose info-dialog lists"
@@ -1335,11 +1330,6 @@ msgstr ""
 #: /shortcuts/overrides.xml
 msgctxt "#31384"
 msgid "Grouped Deleted Recordings"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31386"
-msgid "Auto close OSD controls after delay (in seconds)"
 msgstr ""
 
 #: /1080i/Includes_Topbar.xml
