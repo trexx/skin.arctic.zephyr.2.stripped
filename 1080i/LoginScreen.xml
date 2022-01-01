@@ -2,7 +2,6 @@
     <defaultcontrol always="true">52</defaultcontrol>
 
     <backgroundcolor>0</backgroundcolor>
-    <onload condition="String.IsEmpty(Window(home).Property(SkinInitStarted)) + !String.IsEmpty(Skin.String(StartupPlaylist))">PlayMedia($ESCINFO[Skin.String(StartupPlaylist)])</onload>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
     <controls>
         <control type="group">

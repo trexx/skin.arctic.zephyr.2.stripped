@@ -424,16 +424,6 @@
                         <selected>Skin.HasSetting(KioskMode)</selected>
                         <onclick>Skin.ToggleSetting(KioskMode)</onclick>
                     </control>
-
-                    <control type="button" id="19399" description="Startup Video">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>31168</label>
-                        <label2>$INFO[Skin.String(StartupPlaylist)]</label2>
-                        <onclick condition="String.IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist,.mp4|.avi|.mkv|.xvid|.wmv|.mov|.xsp|.mp3|.wma|.flac|.m3u)</onclick>
-                        <onclick condition="!String.IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
-                    </control>
-                    
                     
                     <!-- ======= -->
                     <!-- Library -->
