@@ -932,33 +932,6 @@
                         <selected>System.HasAddon(resource.images.moviegenreicons.transparent)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
-                    <control type="radiobutton" id="19819">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>resource.images.weatherfanart.multi</label>
-                        <label2>$INFO[System.AddonVersion(resource.images.weatherfanart.multi)]        </label2>
-                        <onclick>Addon.OpenSettings(resource.images.weatherfanart.multi)</onclick>
-                        <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-                        <selected>System.HasAddon(resource.images.weatherfanart.multi)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19820">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>resource.images.weathericons.outline-hd</label>
-                        <label2>$INFO[System.AddonVersion(resource.images.weathericons.outline-hd)]        </label2>
-                        <onclick>Addon.OpenSettings(resource.images.weathericons.outline-hd)</onclick>
-                        <onclick condition="!System.HasAddon(resource.images.weathericons.outline-hd)">InstallAddon(resource.images.weathericons.outline-hd)</onclick>
-                        <selected>System.HasAddon(resource.images.weathericons.outline-hd)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19821">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>resource.images.weathericons.white</label>
-                        <label2>$INFO[System.AddonVersion(resource.images.weathericons.white)]        </label2>
-                        <onclick>Addon.OpenSettings(resource.images.weathericons.white)</onclick>
-                        <onclick condition="!System.HasAddon(resource.images.weathericons.white)">InstallAddon(resource.images.weathericons.white)</onclick>
-                        <selected>System.HasAddon(resource.images.weathericons.white)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
                     <control type="radiobutton" id="19822">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
                         <label>script.artwork.beef</label>
