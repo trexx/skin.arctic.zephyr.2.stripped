@@ -51,11 +51,6 @@ msgid "Use online information"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31008"
-msgid "Install weather fanart"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31009"
 msgid "Replace submenu with hub"
 msgstr ""
@@ -68,11 +63,6 @@ msgstr ""
 #: /1080i/script-skinshortcuts.xml
 msgctxt "#31011"
 msgid "Aspect"
-msgstr ""
-
-#: /1080i/MyWeather.xml
-msgctxt "#31012"
-msgid "Weather fanart installed"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
