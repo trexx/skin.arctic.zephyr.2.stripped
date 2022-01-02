@@ -376,20 +376,6 @@
                 <onclick>ActivateWindow(ServiceSettings,weather)</onclick>
                 <visible>Control.IsEnabled(9005)</visible>
             </item>
-            <!-- Icons -->
-            <item>
-                <label>$INFO[Control.GetLabel(9006)]</label>
-                <icon>special://skin/extras/icons/paintbrush.png</icon>
-                <onclick>RunScript(script.image.resource.select,property=weather.icons&amp;type=resource.images.weathericons)</onclick>
-                <visible>Control.IsEnabled(9006)</visible>
-            </item>
-            <!-- Fanart -->
-            <item>
-                <label>$INFO[Control.GetLabel(9007)]</label>
-                <icon>special://skin/extras/icons/pictures.png</icon>
-                <onclick condition="!System.HasAddon(resource.images.weatherfanart.multi)">InstallAddon(resource.images.weatherfanart.multi)</onclick>
-                <visible>Control.IsEnabled(9007)</visible>
-            </item>
         </content>
     </include>
 
