@@ -318,15 +318,6 @@
                         <label>$LOCALIZE[14078]</label>
                     </control>
 
-                    <control type="button" id="19301" description="Color Highlight">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>31286</label>
-                        <label2>$INFO[Skin.String(focuscolor.name)]</label2>
-                        <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-                        <onclick>RunScript(script.skin.helper.colorpicker,skinstring=focuscolor.name)</onclick>
-                    </control>
-
                     <control type="button" id="19302" description="Color Highlight">
                         <visible>Integer.IsEqual(Window.Property(CurrentFocus),9003)</visible>
                         <include>Defs_Settings_Button</include>
@@ -783,15 +774,6 @@
                         <onclick>Addon.OpenSettings(script.skin.helper.widgets)</onclick>
                         <onclick condition="!System.HasAddon(script.skin.helper.widgets)">InstallAddon(script.skin.helper.widgets)</onclick>
                         <selected>System.HasAddon(script.skin.helper.widgets)</selected>
-                        <include>Defs_Settings_Button</include>
-                    </control>
-                    <control type="radiobutton" id="19803">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9008)</visible>
-                        <label>script.skin.helper.colorpicker</label>
-                        <label2>$INFO[System.AddonVersion(script.skin.helper.colorpicker)]        </label2>
-                        <onclick>Addon.OpenSettings(script.skin.helper.colorpicker)</onclick>
-                        <onclick condition="!System.HasAddon(script.skin.helper.colorpicker)">InstallAddon(script.skin.helper.colorpicker)</onclick>
-                        <selected>System.HasAddon(script.skin.helper.colorpicker)</selected>
                         <include>Defs_Settings_Button</include>
                     </control>
                     <control type="radiobutton" id="19804">
