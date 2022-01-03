@@ -66,17 +66,6 @@
     </include>
 
     <include name="Global_Background">
-        <control type="multiimage" id="7975">
-            <left>-2160</left>
-            <width>1</width>
-            <height>1</height>
-            <include>Defs_TimePerImage</include>
-            <randomize>true</randomize>
-            <fadetime>600</fadetime>
-            <imagepath background="true">$VAR[Global_Background_Image_Var]</imagepath>
-            <visible>System.HasAddon(script.colorbox)</visible>
-            <visible>Skin.HasSetting(EnableBlur)</visible>
-        </control>
         <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
         <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
@@ -84,20 +73,6 @@
             <visible>$EXP[Exp_GlobalBackground]</visible>
             <control type="image">
                 <texture colordiffuse="Background">common/bg.jpg</texture>
-            </control>
-            <control type="multiimage">
-                <include>Defs_TimePerImage</include>
-                <randomize>true</randomize>
-                <width>1920</width>
-                <height>1080</height>
-                <aspectratio>scale</aspectratio>
-                <include condition="Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)">Defs_Global_Fade_Blur</include>
-                <fadetime>600</fadetime>
-                <animation effect="fade" start="45" end="15" time="300" reversible="false" condition="![[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]]">Conditional</animation>
-                <animation effect="fade" end="45" start="15" delay="600" time="600" reversible="false" condition="[Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo)] | [Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsActive(DialogVideoInfo.xml) | Window.IsActive(DialogMusicInfo.xml) | Window.IsActive(DialogAddonInfo.xml)]]">Conditional</animation>
-                <imagepath background="true">$VAR[Global_Background_Image]</imagepath>
-                <animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
-                <animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(KenBurnsEffect)">Conditional</animation>
             </control>
         </control>
         <include>Object_NowPlaying</include>
@@ -114,17 +89,11 @@
 
     <variable name="Global_Background_Image">
         <value condition="Skin.HasSetting(NoFanart)">$VAR[Global_Background_Image_NoFanart]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + !Skin.HasSetting(OnlyBlurInfo) + ![Window.IsVisible(Home) + !Skin.HasSetting(HomeMulti)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(OnlyBlurInfo) + [Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)]">$INFO[Window(home).Property(ImageFilterFIVE)]</value>
         <value>$VAR[Global_Background_Image_Var]</value>
     </variable>
 
     <variable name="Global_Background_Image_Var">
         <value condition="Skin.HasSetting(NoFanart) | ListItem.IsParentFolder">$VAR[Global_Background_Image_NoFanart]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(season.poster))">$INFO[Container.ListItem.Art(season.poster)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(poster))">$INFO[Container.ListItem.Art(poster)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(tvshow.poster))">$INFO[Container.ListItem.Art(tvshow.poster)]</value>
-        <value condition="Skin.HasSetting(EnableBlur) + Skin.HasSetting(PosterBlur) + [!Window.IsVisible(Home) | Skin.HasSetting(HomeMulti)] + !Skin.HasSetting(OnlyBlurInfo) + !String.IsEmpty(Container.ListItem.Art(thumb)) + !String.StartsWith(Container.ListItem.Art(thumb),special://skin/extras/icons/) + !String.StartsWith(Container.ListItem.Art(thumb),Default)">$INFO[Container.ListItem.Art(thumb)]</value>
 
         <!-- Next up -->
         <value condition="Window.IsVisible(script-nextup-notification-PostPlayInfo.xml)">$INFO[Window.Property(background)]</value>
