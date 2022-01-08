@@ -182,12 +182,6 @@
                 <label>250</label>
                 <onclick>SendClick(500)</onclick>
             </item>
-            <!-- <item>
-                <label>24013</label>
-                <onclick>Close</onclick>
-                <onclick>RunScript(script.cu.lrclyrics)</onclick>
-                <enable>System.HasAddon(script.cu.lrclyrics)</enable>
-            </item> -->
         </content>
     </include>
 

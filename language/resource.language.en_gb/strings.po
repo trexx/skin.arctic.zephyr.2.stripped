@@ -1229,11 +1229,6 @@ msgid "Order"
 msgstr ""
 
 #: /1080i/SkinSettings.xml
-msgctxt "#31377"
-msgid "Display video lyrics"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
 msgctxt "#31379"
 msgid "Display plot overlay after delay"
 msgstr ""
