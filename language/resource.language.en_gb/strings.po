@@ -215,21 +215,6 @@ msgctxt "#31045"
 msgid "Results for"
 msgstr ""
 
-#: /1080i/Custom_1131_Decade_Hub.xml
-msgctxt "#31046"
-msgid "Decades"
-msgstr ""
-
-#: /1080i/Custom_1131_Decade_Hub.xml
-msgctxt "#31047"
-msgid "Movie(s)"
-msgstr ""
-
-#: /1080i/Custom_1131_Decade_Hub.xml
-msgctxt "#31048"
-msgid "from the"
-msgstr ""
-
 #: /1080i/Custom_1133_Sets_Hub.xml
 msgctxt "#31049"
 msgid "Collections"

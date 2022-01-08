@@ -290,7 +290,7 @@
                         <centerleft>50%</centerleft>
                         <width>80</width>
                         <height>80</height>
-                        <texture background="true" fallback="DefaultGenres.png">$VAR[Image_GenreIcons]</texture>
+                        <texture background="true">DefaultGenres.png</texture>
                         <visible>String.IsEqual(ListItem.DBType,genre) | String.EndsWith(Container.FolderPath,Genres)</visible>
 
                     </control>

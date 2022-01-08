@@ -122,15 +122,6 @@
         <value>special://skin/extras/icons/filter-off.png</value>
     </variable>
 
-    <variable name="Image_GenreIcons">
-        <value>$VAR[Image_GenreIcons_Path]$INFO[ListItem.Label,,.png]</value>
-    </variable>
-
-    <variable name="Image_GenreIcons_Path">
-        <value condition="System.HasAddon(resource.images.moviegenreicons.horizon)">resource://resource.images.moviegenreicons.horizon/</value>
-        <value condition="System.HasAddon(resource.images.moviegenreicons.transparent)">resource://resource.images.moviegenreicons.transparent/</value>
-    </variable>
-
     <variable name="Image_Overlay_List">
         <value condition="ListItem.IsPlaying">indicator/play.png</value>
         <value condition="ListItem.IsResumable + Integer.IsGreater(ListItem.PercentPlayed,66)">indicator/inprogress-75.png</value>
