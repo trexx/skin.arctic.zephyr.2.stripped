@@ -140,10 +140,8 @@
                         <include condition="$EXP[Exp_IsPluginAdvancedLauncher]" content="View_540_ROM_Details">
                         </include>
                         <include condition="$PARAM[seasons] + !$EXP[Exp_IsPluginAdvancedLauncher]" content="Object_Info_Line">
-                            <param name="nextaired" value="false" />
                         </include>
                         <include condition="!$PARAM[seasons] + !$EXP[Exp_IsPluginAdvancedLauncher]" content="Object_Info_Line">
-                            <param name="nextaired" value="false" />
                             <param name="label" value="$INFO[Container($PARAM[id]).ListItem.MPAA]" />
                             <param name="container" value="Container($PARAM[id])." />
                         </include>

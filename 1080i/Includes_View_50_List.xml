@@ -381,7 +381,6 @@
                             <label>$PARAM[title]</label>
                         </control>
                         <include condition="!$EXP[Exp_IsPluginAdvancedLauncher]" content="Object_Info_Line">
-                            <param name="nextaired" value="false" />
                         </include>
                         <include condition="$EXP[Exp_IsPluginAdvancedLauncher]">View_540_ROM_Details</include>
                         <control type="textbox">
