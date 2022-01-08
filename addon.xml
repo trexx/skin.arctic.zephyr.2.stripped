@@ -13,17 +13,8 @@
         <description lang="en">Arctic Zephyr 2 is a minimalistic skin created by jurialmunkey. The skin is designed to be simple so that the user can focus on their media content. In addition to the default light colour scheme, the skin also includes a number of darker variations.</description>
         <platform>all</platform>
         <license>Creative Commons Attribution Non-Commercial Share-Alike 4.0</license>
-        <forum />
-        <source />
         <assets>
             <icon>icon.png</icon>
-            <fanart>fanart.jpg</fanart>
-            <screenshot>resources/screenshot-01.jpg</screenshot>
-            <screenshot>resources/screenshot-02.jpg</screenshot>
-            <screenshot>resources/screenshot-03.jpg</screenshot>
-            <screenshot>resources/screenshot-04.jpg</screenshot>
-            <screenshot>resources/screenshot-05.jpg</screenshot>
-            <screenshot>resources/screenshot-06.jpg</screenshot>
         </assets>
     </extension>
 </addon>
