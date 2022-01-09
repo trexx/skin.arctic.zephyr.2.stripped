@@ -2,6 +2,7 @@
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="2.0.0" />
+        <import addon="script.embuary.helper" version="2.0.8" />
         <import addon="plugin.video.themoviedb.helper" version="4.4.0" />
         <import addon="weather.gismeteo" version="0.6.3" />
     </requires>
