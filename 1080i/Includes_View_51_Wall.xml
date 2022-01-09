@@ -260,7 +260,7 @@
         <param name="labelinclude" default="View_512_Wall_Label" />
         <param name="aspectratio" default="scale" />
         <param name="diffuse" default="diffuse/poster-wall.png" /> <!-- FIX ME -->
-        <param name="stretchsides" default="Control.IsVisible(512) + !Window.IsVisible(home) + !$EXP[Exp_IsPluginAdvancedLauncher]" />
+        <param name="stretchsides" default="Control.IsVisible(512) + !Window.IsVisible(home)" />
         <definition>
             <control type="group">
                 <right>10</right>
@@ -410,7 +410,6 @@
                         <param name="label2" value="$PARAM[label2]" />
                         <param name="colordiffuse" value="$PARAM[colordiffuse_fo]" />
                     </include>
-                    <include condition="$PARAM[focustrailer]">View_540_Button_Include</include>
                 </focusedlayout>
             </control>
         </definition>
@@ -426,7 +425,7 @@
                 <param name="viewtype" value="$LOCALIZE[31358]" />
                 <param name="viewtypename" value="icon" />
                 <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(actors)" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -445,7 +444,7 @@
                 <param name="viewtypename" value="icon" />
                 <param name="diffuse" value="diffuse/square-wall.png" />
                 <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(games) | Container.Content(programs) | Container.Content(addons) | Container.Content(images) | Container.Content() | Container.Content(files) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(artists) | Container.Content(albums) | Container.Content(games) | Container.Content(programs) | Container.Content(addons) | Container.Content(images) | Container.Content() | Container.Content(files)" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -468,7 +467,7 @@
                 <param name="viewtypename" value="wide" />
                 <param name="forced" value="true" />
                 <param name="labelinclude" value="View_51_Wall_Landscape_Label" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images)" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
@@ -534,7 +533,7 @@
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)" />
                 <width>1028.56</width>
                 <include>View_Vertical_Movement</include>
             </include>
@@ -558,7 +557,7 @@
                 <param name="viewtypename" value="icon" />
                 <param name="controllayout" value="View_514_Wall_Info_Layout" />
                 <param name="forced" value="true" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons) | !$EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(seasons)" />
                 <width>1028.56</width>
                 <include>View_Vertical_Movement</include>
             </include>
@@ -590,7 +589,7 @@
                 <param name="viewtypename" value="wide" />
                 <param name="forced" value="true" />
                 <param name="labelinclude" value="Defs_Null" />
-                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images) | $EXP[Exp_IsPluginAdvancedLauncher]" />
+                <param name="visible" value="Container.Content(movies) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(videos) | Container.Content(images)" />
                 <include>View_Vertical_Movement</include>
             </include>
         </control>
