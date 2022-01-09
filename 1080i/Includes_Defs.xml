@@ -137,7 +137,6 @@
     <include name="Defs_Settings_OnLoad">
         <onload condition="Window.IsActive(interfacesettings)">SetProperty(MenuIconFocus,ReplaceWindow(interfacesettings),Home)</onload>
         <onload condition="Window.IsActive(systemsettings)">SetProperty(MenuIconFocus,ReplaceWindow(systemsettings),Home)</onload>
-        <onload condition="Window.IsActive(pvrsettings)">SetProperty(MenuIconFocus,ReplaceWindow(pvrsettings),Home)</onload>
         <onload condition="Window.IsActive(servicesettings)">SetProperty(MenuIconFocus,ReplaceWindow(servicesettings),Home)</onload>
         <onload condition="Window.IsActive(mediasettings)">SetProperty(MenuIconFocus,ReplaceWindow(mediasettings),Home)</onload>
         <onload condition="Window.IsActive(playersettings)">SetProperty(MenuIconFocus,ReplaceWindow(playersettings),Home)</onload>
@@ -151,7 +150,6 @@
         <onload condition="Window.IsActive(playersettings)">SetFocus(300,3)</onload>
         <onload condition="Window.IsActive(systemsettings)">SetFocus(300,4)</onload>
         <onload condition="Window.IsActive(servicesettings)">SetFocus(300,5)</onload>
-        <onload condition="Window.IsActive(pvrsettings)">SetFocus(300,6)</onload>
         <onload condition="Window.IsActive(systeminfo)">SetFocus(300,7)</onload>
         <onload condition="Window.IsActive(profiles)">SetFocus(300,8)</onload>
     </include>
@@ -163,13 +161,12 @@
         <onleft condition="Window.IsActive(playersettings)">SetFocus(300,3)</onleft>
         <onleft condition="Window.IsActive(systemsettings)">SetFocus(300,4)</onleft>
         <onleft condition="Window.IsActive(servicesettings)">SetFocus(300,5)</onleft>
-        <onleft condition="Window.IsActive(pvrsettings)">SetFocus(300,6)</onleft>
         <onleft condition="Window.IsActive(systeminfo)">SetFocus(300,7)</onleft>
         <onleft condition="Window.IsActive(profiles)">SetFocus(300,8)</onleft>
     </include>
 
     <include name="Defs_InfoDialog_Visible">
-        <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(1140) + !Window.IsVisible(DialogPVRInfo.xml)</visible>
+        <visible>!Window.IsVisible(DialogVideoInfo.xml) + !Window.IsVisible(DialogMusicInfo.xml) + !Window.IsVisible(DialogAddonInfo.xml) + !Window.IsVisible(1140)</visible>
     </include>
 
     <!-- Options Menu -->
@@ -275,7 +272,6 @@
             <onfocus condition="!Window.IsActive(PlayerSettings) + String.IsEqual(Container(300).ListItem.Property(path),ReplaceWindow(PlayerSettings))">ReplaceWindow(PlayerSettings)</onfocus>
             <onfocus condition="!Window.IsActive(SystemSettings) + String.IsEqual(Container(300).ListItem.Property(path),ReplaceWindow(SystemSettings))">ReplaceWindow(SystemSettings)</onfocus>
             <onfocus condition="!Window.IsActive(servicesettings) + String.IsEqual(Container(300).ListItem.Property(path),ReplaceWindow(servicesettings))">ReplaceWindow(servicesettings)</onfocus>
-            <onfocus condition="!Window.IsActive(pvrsettings) + String.IsEqual(Container(300).ListItem.Property(path),ReplaceWindow(pvrsettings))">ReplaceWindow(pvrsettings)</onfocus>
             <onfocus condition="!Window.IsActive(systeminfo) + String.IsEqual(Container(300).ListItem.Property(path),ReplaceWindow(systeminfo))">ReplaceWindow(systeminfo)</onfocus>
             <onfocus condition="!Window.IsActive(Profiles) + String.IsEqual(Container(300).ListItem.Property(path),ReplaceWindow(Profiles))">ReplaceWindow(Profiles)</onfocus>
         </control>

@@ -114,7 +114,6 @@
     <propertydefault labelID="episodes" group="searchmenu" property="widgetAspect">Small Landscape</propertydefault>
 
     <!-- Icon Overrides -->
-    <icon labelID="livetv">special://skin/extras/icons/livetv.png</icon>
     <icon labelID="radio">special://skin/extras/icons/radio.png</icon>
     <icon labelID="weather">special://skin/extras/icons/sun.png</icon>
     <icon labelID="submenu">special://skin/extras/icons/playlist.png</icon>
@@ -235,27 +234,6 @@
             <node label="32075">
                 <content>musicsources</content>
                 <content>upnp-music</content>
-            </node>
-        </node>
-        <node label="32017" condition="System.GetBool(pvrmanager.enabled)" version="13">
-            <content>pvr</content>
-            <node label="19023">
-                <content>pvr-tv</content>
-            </node>
-            <node label="19024">
-                <content>pvr-radio</content>
-            </node>
-        </node>
-        <node label="32017" condition="PVR.HasTVChannels" version="14">
-            <content>pvr</content>
-            <node label="19023">
-                <content>pvr-tv</content>
-            </node>
-        </node>
-        <node label="32087" condition="PVR.HasRadioChannels" version="14">
-            <content>radio</content>
-            <node label="19024">
-                <content>pvr-radio</content>
             </node>
         </node>
         <node label="32020">
@@ -396,15 +374,6 @@
                 <shortcut widget="RandomAlbums" label="$LOCALIZE[31187]" icon="DefaultMusicAlbums.png" widgetTarget="music">special://skin/extras/playlists/RandomAlbums.xsp</shortcut>
                 <shortcut widget="RandomArtists" label="$LOCALIZE[31295]" icon="DefaultMusicArtists.png" widgetTarget="music">special://skin/extras/playlists/RandomArtists.xsp</shortcut>
                 <shortcut widget="MusicNodes" label="$LOCALIZE[31300]" icon="special://skin/extras/icons/title.png" widgetTarget="music">library://music/</shortcut>
-            </node>
-            <node label="$LOCALIZE[31343]">
-                <shortcut widget="LastPlayedChannels" label="$LOCALIZE[31381]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/tv/*?view=lastplayed</shortcut>
-                <shortcut widget="AllChannels" label="$LOCALIZE[19287]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://channels/tv/*</shortcut>
-                <shortcut widget="ActiveRecordings" label="$LOCALIZE[31382]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=flat</shortcut>
-                <shortcut widget="GroupedActiveRecordings" label="$LOCALIZE[31383]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/active?view=grouped</shortcut>
-                <shortcut widget="DeletedRecordings" label="$LOCALIZE[19184]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=flat</shortcut>
-                <shortcut widget="GroupedDeletedRecordings" label="$LOCALIZE[31384]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://recordings/tv/deleted?view=grouped</shortcut>
-                <shortcut widget="Timers" label="$LOCALIZE[19040]" icon="DefaultAddonPVRClient.png" widgetTarget="pvr">pvr://timers/tv/timers</shortcut>
             </node>
             <node label="$LOCALIZE[29921]">
                 <content>widgets</content>

@@ -212,14 +212,6 @@
         <height>48</height>
         <centerbottom>95</centerbottom>
     </include>
-    <include name="OSD_LiveTVPosition">
-        <align>center</align>
-        <height>48</height>
-        <centerbottom>121</centerbottom>
-        <left>331</left>
-        <width>723</width>
-        <itemgap>36</itemgap>
-    </include>
     <include name="OSD_MusicPosition">
         <left>340</left>
         <include condition="Skin.HasSetting(DisableMusicOSDClearLogo)">OSD_Right580</include>
@@ -228,177 +220,6 @@
         <align>center</align>
         <height>48</height>
         <centerbottom>95</centerbottom>
-    </include>
-
-    <include name="OSD_LiveTV_Seekbar">
-        <control type="group">
-            <visible>!Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRChannelGuide.xml) + !Window.IsVisible(1139)</visible>
-            <left>view_pad</left>
-            <right>view_pad</right>
-            <top>view_pad</top>
-            <bottom>view_pad</bottom>
-
-            <control type="group" description="Channel Icon">
-                <left>0</left>
-                <width>227</width>
-                <height>227</height>
-                <bottom>0</bottom>
-                <control type="image">
-                    <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
-                    <animation effect="fade" end="75" condition="true">Conditional</animation>
-                </control>
-                <control type="image" id="2334">
-                    <aspectratio>keep</aspectratio>
-                    <bordersize>20</bordersize>
-                    <texture background="true">$INFO[Player.Icon]</texture>
-                    <visible>!String.IsEmpty(Player.Icon)</visible>
-                </control>
-                <control type="image">
-                    <aspectratio>keep</aspectratio>
-                    <bordersize>20</bordersize>
-                    <texture colordiffuse="panel_fg_100">diffuse/circle.png</texture>
-                    <visible>String.IsEmpty(Player.Icon) | String.IsEmpty(Control.GetLabel(2334))</visible>
-                </control>
-                <control type="label">
-                    <align>center</align>
-                    <aligny>center</aligny>
-                    <font>font_overlay_title</font>
-                    <textcolor>panel_bg</textcolor>
-                    <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
-                    <visible>String.IsEmpty(Player.Icon) | String.IsEmpty(Control.GetLabel(2334))</visible>
-                </control>
-            </control>
-
-            <control type="group" description="Main Info">
-                <left>231</left>
-                <width>762.5</width>
-                <height>227</height>
-                <bottom>0</bottom>
-                <control type="image">
-                    <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
-                    <animation effect="fade" end="75" condition="true">Conditional</animation>
-                </control>
-                <control type="group">
-                    <left>30</left>
-                    <right>30</right>
-                    <top>25</top>
-                    <bottom>25</bottom>
-                    <control type="label">
-                        <font>font_button</font>
-                        <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.ChannelName]</label>
-                    </control>
-                    <control type="label">
-                        <font>font_button</font>
-                        <aligny>top</aligny>
-                        <align>right</align>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
-                    </control>
-                    <control type="label">
-                        <font>font_title_small</font>
-                        <top>40</top>
-                        <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[Player.Title]</label>
-                    </control>
-
-                    <control type="group">
-                        <height>12</height>
-                        <top>110</top>
-                        <control type="progress" description="cache">
-                            <width>100%</width>
-                            <height>12</height>
-                            <info>Player.ProgressCache</info>
-                            <texturebg colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturebg>
-                            <lefttexture colordiffuse="panel_fg_12" border="4">diffuse/progress-left.png</lefttexture>
-                            <midtexture colordiffuse="panel_fg_12" border="4">diffuse/progress-end.png</midtexture>
-                            <righttexture colordiffuse="panel_fg_12" border="4">diffuse/progress-right.png</righttexture>
-                            <visible>Player.Playing | Player.Paused | Player.Caching</visible>
-                            <visible>!Player.Seeking</visible>
-                            <visible>Player.HasMedia</visible>
-                        </control>
-
-                        <control type="progress" id="498">
-                            <width>100%</width>
-                            <height>12</height>
-                            <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
-                            <info>PVR.EpgEventProgress</info>
-                            <visible>Pvr.IsPlayingTv</visible>
-                        </control>
-
-                        <control type="slider" id="402">
-                            <width>100%</width>
-                            <height>12</height>
-                            <visible>Player.HasMedia</visible>
-                            <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
-                            <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
-                            <texturesliderbar colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturesliderbar>
-                            <textureslidernib colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernib>
-                            <textureslidernibfocus colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernibfocus>
-                            <visible>Player.SeekEnabled + Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
-                        </control>
-                    </control>
-                    <control type="label">
-                        <font>font_tiny</font>
-                        <top>140</top>
-                        <right>230</right>
-                        <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.Genre]</label>
-                        <visible>!Window.IsVisible(videoosd)</visible>
-                    </control>
-                    <control type="label">
-                        <font>font_tiny</font>
-                        <top>140</top>
-                        <aligny>top</aligny>
-                        <align>right</align>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.StartTime]$INFO[VideoPlayer.EndTime, - ,]</label>
-                        <visible>!Window.IsVisible(videoosd)</visible>
-                    </control>
-                </control>
-            </control>
-
-            <control type="group" description="Plot Info">
-                <visible>!String.IsEmpty(VideoPlayer.Plot)</visible>
-                <left>997.5</left>
-                <width>762.5</width>
-                <height>227</height>
-                <bottom>0</bottom>
-                <control type="image">
-                    <texture colordiffuse="panel_bg" border="10">diffuse/box.png</texture>
-                    <animation effect="fade" end="75" condition="true">Conditional</animation>
-                </control>
-                <control type="group">
-                    <left>30</left>
-                    <right>30</right>
-                    <top>25</top>
-                    <bottom>25</bottom>
-                    <control type="label">
-                        <font>font_button</font>
-                        <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$LOCALIZE[14116]</label>
-                    </control>
-                    <control type="textbox">
-                        <font>font_plotbox</font>
-                        <top>57</top>
-                        <aligny>top</aligny>
-                        <textcolor>panel_fg_100</textcolor>
-                        <selectedcolor>panel_fg_100</selectedcolor>
-                        <label>$INFO[VideoPlayer.Plot]</label>
-                    </control>
-                </control>
-            </control>
-        </control>
     </include>
 
     <include name="OSD_Video_Seekbar">
@@ -439,47 +260,15 @@
                         <height>435</height>
                         <bottom>0</bottom>
                         <width>290</width>
-                        <control type="group">
-                            <left>-15</left>
-                            <right>-15</right>
-                            <top>-15</top>
-                            <bottom>-15</bottom>
-                            <control type="image">
-                                <bordersize>15</bordersize>
-                                <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
-                                <aspectratio scalediffuse="true" align="left" aligny="bottom">keep</aspectratio>
-                                <visible>!Pvr.IsPlayingTv</visible>
-                                <texture background="true" diffuse="diffuse/poster-wall.png">$VAR[Image_OSD_Artwork]</texture>
-                            </control>
-                            <control type="group">
-                                <visible>Pvr.IsPlayingTv</visible>
-                                <control type="image" id="2334">
-                                    <bordersize>15</bordersize>
-                                    <bordertexture />
-                                    <aspectratio scalediffuse="true" align="left" aligny="bottom">keep</aspectratio>
-                                    <texture background="true" diffuse="diffuse/poster-wall.png">$INFO[Player.Icon]</texture>
-                                    <visible>!String.IsEmpty(Player.Icon)</visible>
-                                </control>
-                                <control type="image">
-                                    <bordersize>15</bordersize>
-                                    <bordertexture />
-                                    <aspectratio scalediffuse="true" align="left" aligny="bottom">keep</aspectratio>
-                                    <texture colordiffuse="panel_fg_100">diffuse/circle.png</texture>
-                                    <visible>String.IsEmpty(Player.Icon) | String.IsEmpty(Control.GetLabel(2334))</visible>
-                                </control>
-                                <control type="label">
-                                    <bottom>0</bottom>
-                                    <centerleft>50%</centerleft>
-                                    <width>320</width>
-                                    <height>320</height>
-                                    <align>center</align>
-                                    <aligny>center</aligny>
-                                    <font>font_overlay_title</font>
-                                    <textcolor>panel_bg</textcolor>
-                                    <label>$INFO[VideoPlayer.ChannelNumberLabel]</label>
-                                    <visible>String.IsEmpty(Player.Icon) | String.IsEmpty(Control.GetLabel(2334))</visible>
-                                </control>
-                            </control>
+                        <left>-15</left>
+                        <right>-15</right>
+                        <top>-15</top>
+                        <bottom>-15</bottom>
+                        <control type="image">
+                            <bordersize>15</bordersize>
+                            <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
+                            <aspectratio scalediffuse="true" align="left" aligny="bottom">keep</aspectratio>
+                            <texture background="true" diffuse="diffuse/poster-wall.png">$VAR[Image_OSD_Artwork]</texture>
                         </control>
                     </control>
                     <control type="grouplist">
@@ -522,7 +311,6 @@
                                 <top>-41</top>
                                 <left>-16</left>
                                 <visible>!Skin.HasSetting(DisableStarRating)</visible>
-                                <visible>!Pvr.IsPlayingTv</visible>
                                 <include content="Object_StarRating">
                                     <param name="rating_prop" value="VideoPlayer.Rating" />
                                     <param name="colordiffuse" value="panel_fg" />
@@ -530,23 +318,12 @@
                             </control>
                             <control type="group">
                                 <left>256</left>
-                                <visible>!Pvr.IsPlayingTv</visible>
                                 <animation effect="slide" end="-256" condition="Skin.HasSetting(DisableStarRating)">Conditional</animation>
                                 <include content="Object_OSD_Ratings">
                                     <param name="align" value="left" />
                                     <param name="imdbvotes" value="false" />
                                     <param name="colordiffuse" value="panel_fg" />
                                 </include>
-                            </control>
-                            <control type="label">
-                                <label>$INFO[VideoPlayer.NextTitle,$LOCALIZE[19031]... ,]</label>
-                                <top>-4</top>
-                                <height>40</height>
-                                <right>600</right>
-                                <aligny>top</aligny>
-                                <textcolor>panel_fg_100</textcolor>
-                                <font>font_small</font>
-                                <visible>Pvr.IsPlayingTv</visible>
                             </control>
                             <control type="grouplist">
                                 <top>-10</top>
@@ -721,7 +498,7 @@
             <width>500</width>
             <right>0</right>
             <include>Animation_FadeInOut</include>
-            <visible>String.IsEmpty(Player.SeekNumeric) + String.IsEmpty(PVR.ChannelNumberInput)</visible>
+            <visible>String.IsEmpty(Player.SeekNumeric)</visible>
             <visible>!Skin.HasSetting(DisableClock)</visible>
             <control type="image">
                 <left>-400</left>
@@ -847,15 +624,7 @@
                 <height>12</height>
                 <info>Player.Progress</info>
                 <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
-                <visible>Player.HasMedia + !Pvr.IsPlayingTv</visible>
-            </control>
-
-            <control type="progress" id="498">
-                <width>100%</width>
-                <height>12</height>
-                <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
-                <info>PVR.EpgEventProgress</info>
-                <visible>Pvr.IsPlayingTv</visible>
+                <visible>Player.HasMedia</visible>
             </control>
 
             <control type="progress" id="401">
@@ -868,46 +637,14 @@
                 <lefttexture colordiffuse="00ffffff" border="4">diffuse/progress-left.png</lefttexture>
                 <midtexture colordiffuse="00ffffff" border="4" diffuse="progress/diffuse.png">diffuse/progress-end.png</midtexture>
                 <righttexture colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</righttexture>
-                <visible>Player.SeekEnabled + !Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
+                <visible>Player.SeekEnabled</visible>
             </control>
 
-            <control type="slider" id="402">
-                <width>100%</width>
-                <height>12</height>
-                <visible>Player.HasMedia</visible>
-                <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
-                <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
-                <texturesliderbar colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturesliderbar>
-                <textureslidernib colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernib>
-                <textureslidernibfocus colordiffuse="panel_fg_100" border="4" diffuse="progress/diffuse-end.png">diffuse/progress-nib.png</textureslidernibfocus>
-                <visible>Player.SeekEnabled + Pvr.IsPlayingTv + !Player.ChannelPreviewActive</visible>
-            </control>
         </control>
     </include>
 
 
     <include name="OSD_Controls">
-
-        <control type="togglebutton" id="11">
-            <centertop>50%</centertop>
-            <description>Skip Back</description>
-            <width>48</width>
-            <height>48</height>
-            <label/>
-            <font/>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/record.png</texturefocus>
-            <texturenofocus colordiffuse="panel_fg_70">osd/record.png</texturenofocus>
-            <usealttexture>PVR.IsRecordingPlayingChannel</usealttexture>
-            <alttexturefocus colordiffuse="$VAR[ColorHighlight]">osd/record-on.png</alttexturefocus>
-            <alttexturenofocus colordiffuse="panel_fg_70">osd/record-on.png</alttexturenofocus>
-            <onclick>PVR.ToggleRecordPlayingChannel</onclick>
-            <enable>PVR.CanRecordPlayingChannel</enable>
-            <visible>VideoPlayer.Content(LiveTV)</visible>
-            <animation effect="fade" start="100" end="33" time="100" condition="!PVR.CanRecordPlayingChannel">Conditional</animation>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-        </control>
 
         <control type="button" id="12">
             <centertop>50%</centertop>
@@ -1090,7 +827,6 @@
             <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
             <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
             <visible>Window.IsVisible(videoosd)</visible>
-            <visible>!VideoPlayer.Content(livetv)</visible>
         </control>
         <control type="togglebutton" id="20">
             <usealttexture>Control.HasFocus(20) | Control.HasFocus(21) | Control.HasFocus(22)</usealttexture>
@@ -1226,42 +962,6 @@
             <onclick>ActivateWindow(osdvideosettings)</onclick>
             <visible>VideoPlayer.Content(musicvideos)</visible>
         </control>
-        <control type="button" id="26">
-            <centertop>50%</centertop>
-            <description>EPG</description>
-            <width>48</width>
-            <height>48</height>
-            <label/>
-            <font/>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/playlist.png</texturefocus>
-            <texturenofocus colordiffuse="panel_fg_70">osd/playlist.png</texturenofocus>
-            <onclick>Close</onclick>
-            <onclick>ActivateWindow(tvguide,,return)</onclick>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <visible>Window.IsVisible(videoosd)</visible>
-            <visible>VideoPlayer.Content(livetv)</visible>
-        </control>
-
-        <control type="button" id="31">
-            <centertop>50%</centertop>
-            <description>3d</description>
-            <width>48</width>
-            <height>48</height>
-            <label/>
-            <font/>
-            <texturefocus colordiffuse="$VAR[ColorHighlight]">osd/3d.png</texturefocus>
-            <texturenofocus colordiffuse="panel_fg_70">osd/3d.png</texturenofocus>
-            <onclick>StereoMode</onclick>
-            <visible>VideoPlayer.IsStereoscopic</visible>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo)) + Player.Paused + !Skin.HasSetting(DontPauseOSD)">Play</onfocus>
-            <onfocus condition="!String.IsEmpty(Window(Home).Property(OSDExtendedInfo))">ClearProperty(OSDExtendedInfo,Home)</onfocus>
-            <onfocus>ClearProperty(OSD_Menu,Home)</onfocus>
-            <visible>Window.IsVisible(videoosd)</visible>
-            <visible>!VideoPlayer.Content(livetv)</visible>
-        </control>
-
     </include>
 
     <include name="OSD_Menu_List">

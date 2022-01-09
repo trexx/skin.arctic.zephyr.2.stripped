@@ -84,16 +84,6 @@
                         <altlabel>[COLOR=Selected]$LOCALIZE[31270][/COLOR]</altlabel>
                     </control>
 
-                    <control type="togglebutton" id="9006" description="PVR">
-                        <onfocus>SetProperty(CurrentFocus,$NUMBER[9006])</onfocus>
-                        <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9006)</usealttexture>
-                        <alttexturenofocus colordiffuse="$VAR[Defs_Settings_ToggleButton_Color]">common/white.png</alttexturenofocus>
-                        <width>550</width>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31422]</label>
-                        <altlabel>[COLOR=Selected]$LOCALIZE[31422][/COLOR]</altlabel>
-                    </control>
-
                     <control type="togglebutton" id="9008" description="Dependencies">
                         <onfocus>SetProperty(CurrentFocus,$NUMBER[9008])</onfocus>
                         <usealttexture>!Control.HasFocus(300) + Integer.IsEqual(Window.Property(CurrentFocus),9008)</usealttexture>
@@ -609,64 +599,6 @@
                         <selected>Skin.HasSetting(MusicOSDSquareArtist)</selected>
                         <onclick>Skin.ToggleSetting(MusicOSDSquareArtist)</onclick>
                     </control>
-                    <!-- ============= -->
-                    <!-- Live TV / PVR -->
-                    <!-- ============= -->
-
-                    <control type="label" id="19681" description="LABEL">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Dialog_Standard_HintLabel</include>
-                        <label>$LOCALIZE[31156]</label>
-                    </control>
-
-                    <control type="radiobutton" id="19601" description="Slim mode">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31093]</label>
-                        <selected>!Skin.HasSetting(PVRGuide.DisableSlimMode)</selected>
-                        <onclick>Skin.ToggleSetting(PVRGuide.DisableSlimMode)</onclick>
-                    </control>
-
-                    <control type="radiobutton" id="19602" description="Info">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[22081]</label>
-                        <selected>Skin.HasSetting(PVRGuide.Info)</selected>
-                        <onclick>Skin.ToggleSetting(PVRGuide.Info)</onclick>
-                    </control>
-
-                    <control type="radiobutton" id="19603" description="Channel Numbers">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31206]</label>
-                        <enable>!Skin.HasSetting(PVRGuide.DisableSlimMode)</enable>
-                        <selected>Skin.HasSetting(PVRGuide.ChannelNumber)</selected>
-                        <onclick>Skin.ToggleSetting(PVRGuide.ChannelNumber)</onclick>
-                    </control>
-
-                    <control type="radiobutton" id="19605" description="Replace genre with time">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31175]</label>
-                        <selected>Skin.HasSetting(PVRGuide.StartEnd)</selected>
-                        <enable>Skin.HasSetting(PVRGuide.DisableSlimMode)</enable>
-                        <onclick>Skin.ToggleSetting(PVRGuide.StartEnd)</onclick>
-                    </control>
-
-                    <control type="label" id="19682" description="LABEL">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Dialog_Standard_HintLabel</include>
-                        <label>$LOCALIZE[31146]</label>
-                    </control>
-
-                    <control type="radiobutton" id="19611" description="Colordiffuse to icons">
-                        <visible>Integer.IsEqual(Window.Property(CurrentFocus),9006)</visible>
-                        <include>Defs_Settings_Button</include>
-                        <label>$LOCALIZE[31094]</label>
-                        <selected>Skin.HasSetting(PVRGuide.ColorDiffuse)</selected>
-                        <onclick>Skin.ToggleSetting(PVRGuide.ColorDiffuse)</onclick>
-                    </control>
-
 
                     <!-- ============= -->
                     <!-- Furniture -->

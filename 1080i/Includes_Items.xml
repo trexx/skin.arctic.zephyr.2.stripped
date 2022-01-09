@@ -255,11 +255,6 @@
                 <icon>special://skin/extras/icons/network.png</icon>
                 <onclick>ActivateWindow(servicesettings)</onclick>
             </item>
-            <item id="10">
-                <label>[CAPITALIZE]$LOCALIZE[14205][/CAPITALIZE]</label>
-                <icon>special://skin/extras/icons/livetv.png</icon>
-                <onclick>ActivateWindow(pvrsettings)</onclick>
-            </item>
             <item id="7">
                 <label>[CAPITALIZE]$LOCALIZE[14210][/CAPITALIZE]</label>
                 <icon>special://skin/extras/icons/actor.png</icon>
@@ -311,13 +306,6 @@
                 <onclick>ReplaceWindow(servicesettings)</onclick>
                 <property name="path">ReplaceWindow(servicesettings)</property>
                 <property name="altpath">ActivateWindow(servicesettings)</property>
-            </item>
-            <item id="10">
-                <label>[CAPITALIZE]$LOCALIZE[14205][/CAPITALIZE]</label>
-                <icon>special://skin/extras/icons/livetv.png</icon>
-                <onclick>ReplaceWindow(pvrsettings)</onclick>
-                <property name="path">ReplaceWindow(pvrsettings)</property>
-                <property name="altpath">ActivateWindow(pvrsettings)</property>
             </item>
             <item id="9">
                 <label>[CAPITALIZE]$LOCALIZE[10007][/CAPITALIZE]</label>
@@ -373,76 +361,6 @@
         </content>
     </include>
 
-    <include name="Items_PVRQuickJump">
-        <content>
-            <!-- Channels -->
-            <item>
-                <label>TV Channels</label>
-                <icon>special://skin/extras/icons/livetv.png</icon>
-                <onclick>ActivateWindow(tvchannels)</onclick>
-                <visible>!Window.IsVisible(MyPVRChannels.xml)</visible>
-            </item>
-            <!-- Guide -->
-            <item>
-                <label>TV Guide</label>
-                <icon>special://skin/extras/icons/tvguide.png</icon>
-                <onclick>ActivateWindow(tvguide)</onclick>
-                <visible>!Window.IsVisible(MyPVRGuide.xml)</visible>
-            </item>
-            <!-- Recordings -->
-            <item>
-                <label>TV Recordings</label>
-                <icon>special://skin/extras/icons/database.png</icon>
-                <onclick>ActivateWindow(tvrecordings)</onclick>
-                <visible>!Window.IsVisible(MyPVRRecordings.xml)</visible>
-            </item>
-            <!-- Timers -->
-            <item>
-                <label>TV Timers</label>
-                <icon>special://skin/extras/icons/alarm.png</icon>
-                <onclick>ActivateWindow(tvtimers)</onclick>
-                <visible>!Window.IsVisible(MyPVRTimers.xml)</visible>
-            </item>
-            <!-- Search -->
-            <item>
-                <label>TV Search</label>
-                <icon>special://skin/extras/icons/search.png</icon>
-                <onclick>ActivateWindow(tvsearch)</onclick>
-                <visible>!Window.IsVisible(MyPVRSearch.xml)</visible>
-            </item>
-        </content>
-    </include>
-
-    <include name="Items_PVRGuide">
-        <content>
-            <!-- Viewmode -->
-            <item>
-                <label>Guide Style</label>
-                <icon>special://skin/extras/icons/viewmode.png</icon>
-                <onclick>Skin.ToggleSetting(PVRGuide.DisableSlimMode)</onclick>
-                <onclick>ReloadSkin()</onclick>
-                <visible>!Skin.HasSetting(KioskMode)</visible>
-            </item>
-            <!-- Info -->
-            <item>
-                <label>Show Info</label>
-                <icon>special://skin/extras/icons/infobubble.png</icon>
-                <onclick>Skin.ToggleSetting(PVRGuide.Info)</onclick>
-                <onclick>ReloadSkin()</onclick>
-                <visible>!Skin.HasSetting(KioskMode)</visible>
-            </item>
-            <!-- Numbers -->
-            <item>
-                <label>Channel Numbers</label>
-                <icon>special://skin/extras/icons/years.png</icon>
-                <onclick>Skin.ToggleSetting(PVRGuide.ChannelNumber)</onclick>
-                <onclick>ReloadSkin()</onclick>
-                <visible>!Skin.HasSetting(PVRGuide.DisableSlimMode)</visible>
-                <visible>!Skin.HasSetting(KioskMode)</visible>
-            </item>
-        </content>
-    </include>
-
     <include name="Items_View">
         <content>
             <!-- Viewmode -->
@@ -452,7 +370,7 @@
                 <include>Items_LockUnlock</include>
                 <onclick>Container.NextViewMode</onclick>
                 <visible>Control.IsEnabled(2)</visible>
-                <visible>Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(MyGames.xml) | Window.IsVisible(MyPVRChannels.xml)</visible>
+                <visible>Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyMusicNav.xml) | Window.IsVisible(AddonBrowser.xml) | Window.IsVisible(MyPics.xml) | Window.IsVisible(MyPrograms.xml) | Window.IsVisible(MyGames.xml)</visible>
                 <visible>!Skin.HasSetting(KioskMode)</visible>
             </item>
             <!-- Group -->
@@ -518,7 +436,6 @@
                 <onclick>Skin.Reset(SearchTerm)</onclick>
                 <onclick>Skin.SetString(SearchTerm)</onclick>
                 <onclick>ActivateWindow(1138)</onclick>
-                <visible>!Window.IsVisible(MyPVRChannels.xml) + !Window.IsVisible(MyPVRGuide.xml) + !Window.IsVisible(MyPVRTimers.xml) + !Window.IsVisible(MyPVRRecordings.xml) + !Window.IsVisible(MyPVRSearch.xml)</visible>
             </item>
             <!-- Filter -->
             <item>

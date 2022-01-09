@@ -9,7 +9,6 @@
     <constant name="view_list_height">780</constant>
 
     <constant name="item_list_height">78</constant>
-    <constant name="item_pvr_height">117</constant>
     <constant name="item_biglist_height">156</constant>
     <constant name="item_row_height">412.5</constant>
     <constant name="item_cast_height">360.5</constant>

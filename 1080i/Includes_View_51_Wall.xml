@@ -183,9 +183,8 @@
                     <include content="Object_Geometric" condition="!$PARAM[circle]">
                         <param name="diffuse" value="$PARAM[diffuse]" />
                     </include>
-                    
-                    <control type="group">
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
+
+                     <control type="group">
                         <height>$PARAM[icononlyheight]</height>
                         <include>Object_DefaultIcon</include>
 
@@ -195,20 +194,7 @@
                             <param name="bordersize" value="$PARAM[bordersize]" />
                             <param name="diffuse" value="$PARAM[diffuse]" />
                         </include>
-                    </control>
-
-                    <control type="group">
-                        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                        <height>$PARAM[icononlyheight]</height>
-                        <include>Object_DefaultIcon</include>
-                        <include content="Object_Poster">
-                            <param name="icon" value="$PARAM[icon]" />
-                            <param name="aspectratio" value="keep" />
-                            <param name="bordersize" value="60" />
-                            <param name="diffuse" value="$PARAM[diffuse]" />
-                        </include>
-                    </control>
-
+                    </control>                   
                     <control type="image">
                         <bordersize>15</bordersize>
                         <texture colordiffuse="80000000">diffuse/circle.png</texture>
@@ -337,14 +323,6 @@
                         <aspectratio scalediffuse="false">keep</aspectratio>
                         <texture background="true" diffuse="$PARAM[diffuse]">$INFO[ListItem.Icon]</texture>
                         <visible>![String.IsEqual(ListItem.DBType,country) | String.IsEqual(ListItem.DBType,director) | String.IsEqual(ListItem.DBType,year) | String.IsEqual(ListItem.DBType,genre) | String.EndsWith(Container.FolderPath,Genres) | String.IsEqual(ListItem.DBType,studio) | [String.IsEmpty(ListItem.DBType) + !String.IsEmpty(ListItem.Icon) + String.StartsWith(ListItem.Icon,Default)]]</visible>
-                        <visible>!String.StartsWith(ListItem.FolderPath,pvr://)</visible>
-                    </control>
-                    <control type="image">
-                        <bordersize>60</bordersize>
-                        <aspectratio scalediffuse="false">keep</aspectratio>
-                        <texture background="true" diffuse="$PARAM[diffuse]">$INFO[ListItem.Icon]</texture>
-                        <visible>![String.IsEqual(ListItem.DBType,country) | String.IsEqual(ListItem.DBType,director) | String.IsEqual(ListItem.DBType,year) | String.IsEqual(ListItem.DBType,genre) | String.EndsWith(Container.FolderPath,Genres) | String.IsEqual(ListItem.DBType,studio) | [String.IsEmpty(ListItem.DBType) + !String.IsEmpty(ListItem.Icon) + String.StartsWith(ListItem.Icon,Default)]]</visible>
-                        <visible>String.StartsWith(ListItem.FolderPath,pvr://)</visible>
                     </control>
                     <control type="textbox">
                         <left>50</left>

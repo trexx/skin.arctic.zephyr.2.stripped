@@ -182,17 +182,6 @@
                 
                 <font>font13</font>
                 <align>left</align>
-                <label>MyPVR.xml</label>
-                <visible>Window.IsVisible(MyPVR.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FF0000FF</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
                 <label>MyVideoNav.xml</label>
                 <visible>Window.IsVisible(MyVideoNav.xml)</visible>
             </control>
@@ -549,94 +538,6 @@
                 <align>left</align>
                 <label>DialogProgress.xml</label>
                 <visible>Window.IsVisible(DialogProgress.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRChannelManager.xml</label>
-                <visible>Window.IsVisible(DialogPVRChannelManager.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRChannelsOSD.xml</label>
-                <visible>Window.IsVisible(DialogPVRChannelsOSD.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRGroupManager.xml</label>
-                <visible>Window.IsVisible(DialogPVRGroupManager.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRGuideInfo.xml</label>
-                <visible>Window.IsVisible(DialogPVRGuideInfo.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRGuideOSD.xml</label>
-                <visible>Window.IsVisible(DialogPVRGuideOSD.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRGuideSearch.xml</label>
-                <visible>Window.IsVisible(DialogPVRGuideSearch.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRRecordingInfo.xml</label>
-                <visible>Window.IsVisible(DialogPVRRecordingInfo.xml)</visible>
-            </control>
-
-            <control type="label">
-                <width>780</width>
-                <height>21</height>
-                <textcolor>FFFF0000</textcolor>
-                
-                <font>font13</font>
-                <align>left</align>
-                <label>DialogPVRTimerSettings.xml</label>
-                <visible>Window.IsVisible(DialogPVRTimerSettings.xml)</visible>
             </control>
 
             <control type="label">

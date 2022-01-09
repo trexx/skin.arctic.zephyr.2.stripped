@@ -424,61 +424,7 @@
     <include name="Object_Widget_ContentPath">
         <content target="$PARAM[target]" sortby="$PARAM[sortby]" sortorder="$PARAM[sortorder]" limit="$PARAM[limit]">$PARAM[content]</content>
     </include>
-
-    <include name="Object_PVR_Icon">
-        <param name="bgcolor" default="main_bg" />
-        <param name="fgcolor" default="main_fg" />
-        <param name="width" default="113" />
-        <param name="height" default="113" />
-        <param name="font" default="font_small_bold" />
-        <definition>
-            <control type="image">
-                <top>4</top>
-                <right>4</right>
-                <left>0</left>
-                <bottom>0</bottom>
-                <bordersize>20</bordersize>
-                <texture colordiffuse="$PARAM[fgcolor]_100">$INFO[ListItem.Icon]</texture>
-                <aspectratio aligny="center" align="right">keep</aspectratio>
-                <visible>Skin.HasSetting(PVRGuide.ColorDiffuse)</visible>
-            </control>
-            <control type="image">
-                <top>4</top>
-                <right>4</right>
-                <left>0</left>
-                <bottom>0</bottom>
-                <bordersize>20</bordersize>
-                <texture>$INFO[ListItem.Icon]</texture>
-                <aspectratio aligny="center" align="right">keep</aspectratio>
-                <visible>!Skin.HasSetting(PVRGuide.ColorDiffuse)</visible>
-            </control>
-            <control type="image">
-                <top>4</top>
-                <right>4</right>
-                <left>0</left>
-                <bottom>0</bottom>
-                <bordersize>20</bordersize>
-                <texture colordiffuse="$PARAM[fgcolor]_100">common/circle.png</texture>
-                <aspectratio aligny="center" align="right">keep</aspectratio>
-                <visible>String.IsEmpty(ListItem.Icon) | String.StartsWith(ListItem.Icon,special://xbmc/addons/pvr.demo/)</visible>
-            </control>
-            <control type="label">
-                <top>4</top>
-                <right>4</right>
-                <left>0</left>
-                <bottom>0</bottom>
-                <align>center</align>
-                <aligny>center</aligny>
-                <textoffsetx>20</textoffsetx>
-                <font>$PARAM[font]</font>
-                <textcolor>$PARAM[bgcolor]_90</textcolor>
-                <selectedcolor>$PARAM[bgcolor]_90</selectedcolor>
-                <label>$INFO[ListItem.ChannelNumberLabel]</label>
-                <visible>String.IsEmpty(ListItem.Icon) | String.StartsWith(ListItem.Icon,special://xbmc/addons/pvr.demo/)</visible>
-            </control>
-        </definition>
-    </include>
-
+    
     <include name="Object_Codecs">
         <param name="infohide" default="true" />
         <definition>
@@ -806,26 +752,6 @@
             <param name="name" value="Status" />
             <param name="label" value="ListItem.Property(Addon.Status)" />
         </include>
-    </include>
-
-    <include name="Object_Info_Details_PVR">
-        <include content="Object_Info_TextPairs">
-            <param name="pad" value="24" />
-            <param name="name" value="Date" />
-            <param name="label" value="ListItem.StartDate" />
-        </include>
-        <include content="Object_Info_TextPairs">
-            <param name="pad" value="24" />
-            <param name="name" value="Time" />
-            <param name="label" value="ListItem.StartTime" />
-            <param name="label2" value="$INFO[ListItem.EndTime,  -  ,]" />
-        </include>
-        <!-- <include content="Object_Info_TextPairs">
-            <param name="pad" value="24" />
-            <param name="name" value="Channel" />
-            <param name="label" value="ListItem.ChannelName" />
-            <param name="label2" value="$INFO[ListItem.ChannelNumberLabel,  -  Ch.,]" />
-        </include> -->
     </include>
 
     <include name="Object_Info_Details">
@@ -1773,84 +1699,6 @@
                         <animation effect="fade" start="100" end="0" condition="!Integer.IsGreater($PARAM[rating_prop],4)">Conditional</animation>
                     </control>
                 </control>
-            </control>
-        </definition>
-    </include>
-    <include name="Object_PVR_Info">
-        <control type="grouplist">
-            <visible>!Control.HasFocus(9000)</visible>
-            <height>282</height>
-            <top>-15</top>
-            <right>0</right>
-            <left>0</left>
-            <orientation>vertical</orientation>
-            <usecontrolcoords>true</usecontrolcoords>
-            <itemgap>0</itemgap>
-            <include>Object_PVR_Info_Content</include>
-        </control>
-        <control type="grouplist">
-            <visible>Control.HasFocus(9000)</visible>
-            <height>282</height>
-            <top>-15</top>
-            <right>0</right>
-            <left>0</left>
-            <orientation>vertical</orientation>
-            <usecontrolcoords>true</usecontrolcoords>
-            <itemgap>0</itemgap>
-            <include content="Object_PVR_Info_Content">
-                <param name="listitem" value="ListItem.Next" />
-            </include>
-        </control>
-    </include>
-
-    <include name="Object_PVR_Info_Content">
-        <param name="listitem" default="ListItem." />
-        <definition>
-            <control type="group">
-                <height>60</height>
-                <control type="label">
-                    <label>$INFO[$PARAM[listitem]EpgEventTitle]$INFO[$PARAM[listitem]EpisodeName, - ,]</label>
-                    <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
-                    <font>font_title</font>
-                    <visible>!String.IsEmpty($PARAM[listitem]EpgEventTitle)</visible>
-                </control>
-                <control type="label">
-                    <label>$INFO[$PARAM[listitem]Title]</label>
-                    <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
-                    <font>font_title</font>
-                    <visible>String.IsEmpty($PARAM[listitem]EpgEventTitle) + !String.IsEmpty($PARAM[listitem]Title)</visible>
-                </control>
-                <control type="label">
-                    <label>$INFO[$PARAM[listitem]Label]</label>
-                    <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
-                    <font>font_title</font>
-                    <visible>String.IsEmpty($PARAM[listitem]EpgEventTitle) + String.IsEmpty($PARAM[listitem]Title) + !String.IsEmpty($PARAM[listitem]Label)</visible>
-                </control>
-                <control type="label">
-                    <label>$INFO[ListItem.ChannelName]</label>
-                    <aligny>top</aligny>
-                    <textcolor>main_fg_100</textcolor>
-                    <font>font_title</font>
-                    <visible>String.IsEmpty($PARAM[listitem]EpgEventTitle) + String.IsEmpty($PARAM[listitem]Title) + String.IsEmpty($PARAM[listitem]Label)</visible>
-                </control>
-            </control>
-            <control type="label">
-                <label>$INFO[ListItem.ChannelName,[COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]Genre,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]StartTime,  |  [COLOR=main_fg_100],[/COLOR]]$INFO[$PARAM[listitem]EndTime,[COLOR=main_fg_100] - ,[/COLOR]]</label>
-                <height>60</height>
-                <aligny>top</aligny>
-                <textcolor>$VAR[ColorHighlight]</textcolor>
-                <font>font_small</font>
-                <visible>!String.IsEmpty($PARAM[listitem]Title) | !String.IsEmpty($PARAM[listitem]ChannelNumber)</visible>
-            </control>
-            <control type="textbox">
-                <label fallback="19055">$INFO[$PARAM[listitem]Plot]</label>
-                <height>260</height>
-                <aligny>top</aligny>
-                <textcolor>main_fg_70</textcolor>
-                <font>font_plotbox</font>
             </control>
         </definition>
     </include>
