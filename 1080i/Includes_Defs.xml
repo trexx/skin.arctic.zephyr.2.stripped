@@ -6,7 +6,6 @@
     </include>
 
     <variable name="Defs_SettingsPanel_NF">
-        <!-- <value condition="Skin.HasSetting(DisableGeometric) + !String.IsEqual(Skin.CurrentColorTheme,SKINDEFAULT)">panel_fg_30</value> -->
         <value>panel_fg_70</value>
     </variable>
 
