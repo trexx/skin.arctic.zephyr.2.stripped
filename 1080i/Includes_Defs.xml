@@ -150,8 +150,8 @@
         <onload condition="Window.IsActive(playersettings)">SetFocus(300,3)</onload>
         <onload condition="Window.IsActive(systemsettings)">SetFocus(300,4)</onload>
         <onload condition="Window.IsActive(servicesettings)">SetFocus(300,5)</onload>
-        <onload condition="Window.IsActive(systeminfo)">SetFocus(300,7)</onload>
-        <onload condition="Window.IsActive(profiles)">SetFocus(300,8)</onload>
+        <onload condition="Window.IsActive(systeminfo)">SetFocus(300,6)</onload>
+        <onload condition="Window.IsActive(profiles)">SetFocus(300,7)</onload>
     </include>
 
     <include name="Defs_Settings_OnLeft">
@@ -161,8 +161,8 @@
         <onleft condition="Window.IsActive(playersettings)">SetFocus(300,3)</onleft>
         <onleft condition="Window.IsActive(systemsettings)">SetFocus(300,4)</onleft>
         <onleft condition="Window.IsActive(servicesettings)">SetFocus(300,5)</onleft>
-        <onleft condition="Window.IsActive(systeminfo)">SetFocus(300,7)</onleft>
-        <onleft condition="Window.IsActive(profiles)">SetFocus(300,8)</onleft>
+        <onleft condition="Window.IsActive(systeminfo)">SetFocus(300,6)</onleft>
+        <onleft condition="Window.IsActive(profiles)">SetFocus(300,7)</onleft>
     </include>
 
     <include name="Defs_InfoDialog_Visible">
