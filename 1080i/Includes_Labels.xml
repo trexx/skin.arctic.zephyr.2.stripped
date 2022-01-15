@@ -133,6 +133,14 @@
         <value condition="Window.IsVisible(Home.xml)">$LOCALIZE[10000]</value>
     </variable>
 
+    <variable name="Label_OSD_Time">
+        <value>$INFO[Player.Time]</value>
+    </variable>
+
+    <variable name="Label_OSD_Duration">
+        <value>$INFO[Player.Duration]</value>
+    </variable>
+
     <variable name="Label_OSD_FinishTime">
         <value condition="!String.IsEmpty(Player.FinishTime)">$INFO[Player.FinishTime]</value>
     </variable>
