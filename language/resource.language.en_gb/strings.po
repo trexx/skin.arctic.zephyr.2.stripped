@@ -783,18 +783,8 @@ msgctxt "#31185"
 msgid "Recently Added Movies"
 msgstr ""
 
-#: /1080i/SkinSettings.xml
-msgctxt "#31186"
-msgid "Theme Switching"
-msgstr ""
-
 msgctxt "#31187"
 msgid "Random Albums"
-msgstr ""
-
-#: /1080i/SkinSettings.xml
-msgctxt "#31189"
-msgid "Geometric pattern on panels"
 msgstr ""
 
 #: /shortcuts/overrides.xml
