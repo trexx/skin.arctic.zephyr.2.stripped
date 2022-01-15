@@ -23,7 +23,7 @@
         </control>
         <control type="image" description="Background">
             <include>Dimensions_Fullscreen</include>
-            <texture>common/bg.png</texture>
+            <texture>common/bg.jpg</texture>
             <visible>!Window.IsVisible(Home) | [Window.IsVisible(Home) + [Skin.HasSetting(HomeMulti) | $EXP[Exp_InfoVisible]]]</visible>
         </control>
     </include>
@@ -72,7 +72,7 @@
         <control type="group">
             <visible>$EXP[Exp_GlobalBackground]</visible>
             <control type="image">
-                <texture>common/bg.png</texture>
+                <texture>common/bg.jpg</texture>
             </control>
         </control>
         <include>Object_NowPlaying</include>
