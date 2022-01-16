@@ -103,8 +103,7 @@
         <value condition="Window.IsVisible(Settings.xml)">$LOCALIZE[31069]</value>
         <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(SkinSettings.xml) | Window.IsVisible(SettingsProfile.xml) | Window.IsVisible(SettingsSystemInfo.xml) | Window.IsVisible(eventlog)">$VAR[Label_Settings_Header]</value>
         <value condition="Window.IsVisible(Home) + Skin.HasSetting(HomeMulti) + [Control.HasFocus(302) | ControlGroup(3000).HasFocus()]">$INFO[Container(301).ListItem.Label]</value>
-        <value condition="Window.IsVisible(Home) + Skin.HasSetting(HomeMulti)">$INFO[Container(301).ListItem.Label]</value>
-        <value condition="Window.IsVisible(Home)">$LOCALIZE[1034]</value>
+        <value condition="Window.IsVisible(Home) + !Control.HasFocus(301)">$LOCALIZE[1034]</value>
         <value condition="Container.Content() + String.StartsWith(Container.FolderPath,library://video/movies/)">$LOCALIZE[14022]</value>
         <value condition="[Container.Content(seasons) | Container.Content(episodes)] + !String.IsEmpty(Container.ShowTitle)">$INFO[Container.ShowTitle]</value>
         <value condition="!String.IsEmpty(Container.FolderName)">$INFO[Container.FolderName]</value>
