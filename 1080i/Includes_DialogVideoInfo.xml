@@ -283,26 +283,7 @@
                             <visible>String.IsEqual(ListItem.DBType,movie) + Integer.IsGreater(Container(50).NumItems,0)</visible>
                             <content limit="25" target="videos">$VAR[Info_CastFeature]</content>
                         </include>
-
-                        <!-- Youtube -->
-                        <include content="Info_Widget_Poster">
-                            <param name="includecondition" value="System.HasAddon(plugin.video.youtube) + !Skin.HasSetting(DisableInfoListYouTube)" />
-                            <param name="id" value="5049" />
-                            <param name="groupid" value="7549" />
-                            <param name="label" value="$LOCALIZE[31141]" />
-                            <param name="itemwidth" value="item_landscape_width" />
-                            <param name="iconheight" value="item_icon_height" />
-                            <param name="diffuse" value="diffuse/landscape-wall.png" />
-                            <param name="labelinclude" value="View_Cast_Video_Label" />
-                            <param name="icon" value="$INFO[ListItem.Icon]" />
-                            <onclick>SetFocus(50)</onclick>
-                            <onclick>SetFocus(300)</onclick>
-                            <onclick>PlayMedia($INFO[Container(5049).ListItem.FileNameAndPath])</onclick>
-                            <include>Defs_InfoList_OnBack</include>
-                            <content limit="25" target="videos" sortby="file">$VAR[Info_Youtube]</content>
-                            <visible>String.IsEqual(ListItem.DBType,movie) | String.IsEqual(ListItem.DBType,tvshow) | String.IsEqual(ListItem.DBType,season) | String.IsEqual(ListItem.DBType,episode)</visible>
-                        </include>
-                        
+                     
                         <!-- Posters -->
                         <include content="Info_Widget_Poster">
                             <param name="includecondition" value="!Skin.HasSetting(DisableInfoListPosters)" />
