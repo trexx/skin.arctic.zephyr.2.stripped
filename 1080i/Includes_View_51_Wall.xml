@@ -186,7 +186,6 @@
 
                      <control type="group">
                         <height>$PARAM[icononlyheight]</height>
-                        <include>Object_DefaultIcon</include>
 
                         <include content="Object_Poster">
                             <param name="icon" value="$PARAM[icon]" />

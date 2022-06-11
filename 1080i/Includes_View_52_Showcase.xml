@@ -596,7 +596,6 @@
                     <include content="Object_Geometric">
                         <param name="diffuse" value="diffuse/lovefilm.png" />
                     </include>
-                    <include>Object_DefaultIcon</include>
                 </control>
             </control>
             <control type="wraplist" id="523">
