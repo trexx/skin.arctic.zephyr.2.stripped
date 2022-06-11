@@ -2,6 +2,7 @@
 <!-- Foundation -->
 <window id="2">
     <defaultcontrol always="true">500</defaultcontrol>
+    <backgroundcolor>Background</backgroundcolor>
     <menucontrol>300</menucontrol>
     <views>500,510</views>    
     <controls>

@@ -33,6 +33,11 @@
             <visible>Player.HasVideo</visible>
             <include>Dimensions_Fullscreen</include>
         </control>
+        <control type="image" description="Background">
+            <include>Dimensions_Fullscreen</include>
+            <texture>common/bg.jpg</texture>
+            <visible>Player.HasVideo</visible>
+        </control>
     </include>
     
     <include name="Global_Visualisation">
@@ -69,12 +74,6 @@
         <include condition="Skin.HasSetting(global.showvideo)">Global_Videowindow</include>
         <include condition="!Skin.HasSetting(global.showvideo)">Global_Videowindow_Hidden</include>
         <include condition="Skin.HasSetting(global.showvisualisation)">Global_Visualisation</include>
-        <control type="group">
-            <visible>$EXP[Exp_GlobalBackground]</visible>
-            <control type="image">
-                <texture>common/bg.jpg</texture>
-            </control>
-        </control>
         <include>Object_NowPlaying</include>
         <include>Object_Codecs</include>
         <include>Object_Languages</include>

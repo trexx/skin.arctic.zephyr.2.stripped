@@ -51,6 +51,10 @@
             </include>
 
             <control type="group">
+                <control type="image" description="Background">
+                    <include>Dimensions_Fullscreen</include>
+                    <texture>common/bg.jpg</texture>
+                </control>
                 <include condition="String.IsEmpty(Window(Home).Property(OSDViewMode))">Animation_FadeIn</include>
                 <visible>Window.IsVisible(DialogVideoInfo.xml)</visible>
                 <include>Global_Background</include>

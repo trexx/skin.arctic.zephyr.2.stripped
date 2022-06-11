@@ -1,7 +1,7 @@
 <window>
     <defaultcontrol always="true">52</defaultcontrol>
 
-    <backgroundcolor>0</backgroundcolor>
+    <backgroundcolor>Background</backgroundcolor>
     <onload>SetProperty(SkinInitStarted,1,home)</onload>
     <controls>
         <control type="group">
