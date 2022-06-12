@@ -1043,17 +1043,9 @@
                 <bottom>$PARAM[pad]</bottom>
                 <bordersize>15</bordersize>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-                <include content="Object_Geometric_Panel">
-                    <param name="diffuse" value="$PARAM[diffuse]" />
-                    <param name="colordiffuse" value="AltPosterBack" />
-                    <param name="texture" value="$PARAM[diffuse]" />
-                </include>
+                <texture colordiffuse="AltPosterBack" diffuse="$PARAM[diffuse]">$PARAM[diffuse]</texture>
             </control>
         </definition>
-    </include>
-
-    <include name="Object_Geometric_Panel">
-        <texture colordiffuse="$PARAM[colordiffuse]" diffuse="$PARAM[diffuse]">$PARAM[texture]</texture>
     </include>
 
     <include name="Object_Poster">
