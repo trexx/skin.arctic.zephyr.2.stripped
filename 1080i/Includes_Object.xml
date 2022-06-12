@@ -1043,7 +1043,6 @@
                 <bottom>$PARAM[pad]</bottom>
                 <bordersize>15</bordersize>
                 <aspectratio scalediffuse="false">scale</aspectratio>
-                <bordertexture border="30" colordiffuse="Shadow">common/shadow-15.png</bordertexture>
                 <include content="Object_Geometric_Panel">
                     <param name="diffuse" value="$PARAM[diffuse]" />
                     <param name="colordiffuse" value="AltPosterBack" />
