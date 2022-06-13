@@ -747,7 +747,6 @@
                     <bottom>$PARAM[pad]</bottom>
                     <control type="image">
                         <bordersize>15</bordersize>
-                        <bordertexture border="30" colordiffuse="55ffffff">common/shadow-15.png</bordertexture>
                         <texture border="20" colordiffuse="$PARAM[colordiffuse]">common/selectbox.png</texture>
                     </control>
                 </control>

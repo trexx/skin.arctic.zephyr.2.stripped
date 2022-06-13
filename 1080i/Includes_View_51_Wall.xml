@@ -201,7 +201,10 @@
                         <visible>$PARAM[circle]</visible>
                     </control>
 
-                    <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
+                    <control type="group">
+                        <visible>!Control.HasFocus($PARAM[id])</visible>
+                        <include condition="!$PARAM[circle]">View_WatchedOverlay</include>
+                    </control>
                     
                     <control type="group">
                         <visible>!$PARAM[circle]</visible>
