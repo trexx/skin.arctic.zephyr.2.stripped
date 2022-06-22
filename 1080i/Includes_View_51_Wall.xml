@@ -180,10 +180,6 @@
                         <param name="id" value="$PARAM[id]" />
                     </include>
 
-                    <include content="Object_Geometric" condition="!$PARAM[circle]">
-                        <param name="diffuse" value="$PARAM[diffuse]" />
-                    </include>
-
                      <control type="group">
                         <height>$PARAM[icononlyheight]</height>
 
