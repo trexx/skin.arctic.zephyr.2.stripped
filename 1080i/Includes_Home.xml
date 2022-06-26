@@ -484,7 +484,7 @@
                             </control>
                         </control>
                         <control type="panel" id="301">
-                            <visible allowhiddenfocus="true">![Control.HasFocus(302) | Control.HasFocus(3002)]</visible>
+                            <visible allowhiddenfocus="true">![Control.HasFocus(302) | Control.HasFocus(3002)] + Control.HasFocus(301)</visible>
                             <include>Animation_Left</include>
                             <include>Defs_InfoDialog_Visible</include>
                             <onleft condition="!Skin.HasSetting(SubmenuOnly) + Integer.IsGreater(Container(302).NumItems,0)">SetProperty(submenuVisibility,$INFO[Container(301).ListItem.Property(submenuVisibility)],home)</onleft>
