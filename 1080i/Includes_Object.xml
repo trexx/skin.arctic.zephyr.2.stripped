@@ -2660,6 +2660,7 @@
 
                 <control type="scrollbar" id="9601">
                     <visible>$PARAM[visible]</visible>
+                    <visible>$EXP[Exp_ShowPlotOverlay]</visible>
                     <top>100</top>
                     <left>-1000</left>
                     <bottom>100</bottom>

@@ -67,7 +67,6 @@
             <include condition="Skin.HasSetting(HomeMulti) + Skin.HasSetting(HomeMultiHorizontal)">Home_Multi_Horizontal</include>
             <include condition="!Skin.HasSetting(HomeMulti)">Home_Simple</include>
         </control>
-        <include>Object_PlotOverlay</include>
 
     </controls>
 </window>
