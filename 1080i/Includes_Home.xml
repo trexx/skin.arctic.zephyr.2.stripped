@@ -222,10 +222,6 @@
 
             <animation effect="slide" end="0" start="0,180" time="300" tween="quadratic" condition="![Control.HasFocus(5610) | Control.HasFocus(302) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogMusicInfo.xml) | Window.IsVisible(DialogAddonInfo.xml)] + [Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
             <animation effect="slide" end="0" start="0,465" time="300" tween="quadratic" condition="Control.HasFocus(302) + !String.IsEqual(Window(Home).Property(WidgetFocus),5610) + [Window.Previous(VideoFullScreen.xml) | Window.Previous(MusicVisualisation.xml)]">WindowOpen</animation>
-            <!-- Back Panel -->
-            <control type="image">
-                <texture colordiffuse="HomePanel">common/bg.jpg</texture>
-            </control>
             <!-- Topbar For Submenu or Widget -->
             <control type="group">
                 <visible>[Control.HasFocus(5610) | Control.HasFocus(302)] + !$EXP[Exp_InfoVisible]</visible>
@@ -1065,4 +1061,3 @@
         </definition>
     </include>
 </includes>
-
