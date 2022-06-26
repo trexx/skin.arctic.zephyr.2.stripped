@@ -63,7 +63,7 @@
             <right>24</right>
             <bottom>24</bottom>
             <height>8</height>
-            <texturebg colordiffuse="dialog_bg_12">osd/progress-bg.png</texturebg>
+            <texturebg colordiffuse="dialog_bg_12">primatives/square.png</texturebg>
             <info>Player.Volume</info>
             <visible>false</visible>
         </control>

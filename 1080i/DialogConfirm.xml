@@ -47,7 +47,7 @@
                 <bottom>440</bottom>
                 <height>16</height>
                 <info>System.Progressbar</info>
-                <texturebg colordiffuse="dialog_fg_30" border="4">diffuse/progress-bg.png</texturebg>
+                <texturebg colordiffuse="dialog_fg_30">primatives/square.png</texturebg>
             </control>
 
         </control>

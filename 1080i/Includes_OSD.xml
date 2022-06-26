@@ -610,8 +610,8 @@
                 <width>100%</width>
                 <height>12</height>
                 <info>Player.ProgressCache</info>
-                <texturebg colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturebg>
-                <midtexture colordiffuse="panel_fg_12" border="4">diffuse/progress-nib.png</midtexture>
+                <texturebg colordiffuse="00ffffff">primatives/square.png</texturebg>
+                <midtexture colordiffuse="panel_fg_12">primatives/square.png</midtexture>
                 <visible>Player.Playing | Player.Paused | Player.Caching</visible>
                 <visible>!Player.Seeking</visible>
                 <visible>Player.HasMedia</visible>
@@ -621,7 +621,7 @@
                 <width>100%</width>
                 <height>12</height>
                 <info>Player.Progress</info>
-                <texturebg colordiffuse="panel_fg_12" border="4">diffuse/progress-bg.png</texturebg>
+                <texturebg colordiffuse="panel_fg_12">primatives/square.png</texturebg>
                 <visible>Player.HasMedia</visible>
             </control>
 
@@ -631,8 +631,8 @@
                 <visible>Player.HasMedia</visible>
                 <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
                 <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
-                <texturebg colordiffuse="00ffffff" border="4">diffuse/progress-bg.png</texturebg>
-                <midtexture colordiffuse="00ffffff" border="4" diffuse="progress/diffuse.png">diffuse/progress-mid.png</midtexture>
+                <texturebg colordiffuse="00ffffff">primatives/square.png</texturebg>
+                <midtexture colordiffuse="00ffffff" diffuse="progress/diffuse.png">primatives/square.png</midtexture>
                 <visible>Player.SeekEnabled</visible>
             </control>
 
