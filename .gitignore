@@ -2,3 +2,4 @@
 *.xcf
 *~
 Thumbs.db
+.vscode/settings.json
