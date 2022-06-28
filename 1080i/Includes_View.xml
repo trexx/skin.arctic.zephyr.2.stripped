@@ -532,7 +532,7 @@
                     <textcolor>main_fg_100</textcolor>
                     <font>font_tiny_bold</font>
                     <height>24</height>
-                    <visible>$PARAM[toplabel]</visible>
+                    <visible>Window.IsActive(10004)</visible>
                     <visible>Control.HasFocus(5000)</visible>
                 </control>
                 <control type="label">
@@ -544,7 +544,7 @@
                     <textcolor>main_fg_30</textcolor>
                     <font>font_tiny_bold</font>
                     <height>24</height>
-                    <visible>$PARAM[toplabel]</visible>
+                    <visible>Window.IsActive(10004)</visible>
                     <visible>!Control.HasFocus(5000)</visible>
                 </control>
                 <control type="group">
@@ -570,7 +570,7 @@
                         <ondown condition="Container(5000).Column(1)">SetFocus(5100,1)</ondown>
                         <ondown condition="Container(5000).Column(2)">SetFocus(5100,2)</ondown>
                         <ondown condition="Container(5000).Column(3)">SetFocus(5100,3)</ondown>
-                        <include>Items_Settings_System</include>
+                        <include condition="Window.IsActive(10004)">Items_Settings_System</include>
                     </include>
                 </control>
                 <control type="group">
@@ -593,7 +593,7 @@
                         <textcolor>main_fg_100</textcolor>
                         <font>font_tiny_bold</font>
                         <height>24</height>
-                        <visible>$PARAM[toplabel]</visible>
+                        <visible>Window.IsActive(10004)</visible>
                         <visible>Control.HasFocus(5100)</visible>
                     </control>
                     <control type="label">
@@ -605,7 +605,7 @@
                         <textcolor>main_fg_30</textcolor>
                         <font>font_tiny_bold</font>
                         <height>24</height>
-                        <visible>$PARAM[toplabel]</visible>
+                        <visible>Window.IsActive(10004)</visible>
                         <visible>!Control.HasFocus(5100)</visible>
                     </control>
                     <include content="View_51_Wall_Container">
@@ -630,7 +630,7 @@
                         <onup condition="Container(5100).Column(2)">SetFocus(5000,2)</onup>
                         <onup condition="Container(5100).Column(3)">SetFocus(5000,3)</onup>
                         <ondown>noop</ondown>
-                        <include>Items_Settings_Main</include>
+                        <include condition="Window.IsActive(10004)">Items_Settings_Main</include>
                     </include>
                 </control>
             </control>
