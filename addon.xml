@@ -1,4 +1,4 @@
-<addon id="skin.arctic.zephyr.2.stripped" name="Arctic Zephyr 2 Stripped" provider-name="jurialmunkey, trexx" version="0.0.12">
+<addon id="skin.arctic.zephyr.2.stripped" name="Arctic Zephyr 2 Stripped" provider-name="jurialmunkey, trexx" version="0.0.13">
     <requires>
         <import addon="xbmc.gui" version="5.15.0" />
         <import addon="script.skinshortcuts" version="2.0.0" />
