@@ -155,9 +155,9 @@
         <texturefocus/>
         <texturenofocus/>
         <pulseonselect>false</pulseonselect>
-        <texturesliderbar colordiffuse="dialog_fg_12" border="6">slider/slider_bg.png</texturesliderbar>
-        <textureslidernib colordiffuse="dialog_fg_30" border="6">slider/slider_nib.png</textureslidernib>
-        <textureslidernibfocus colordiffuse="Selected" border="6">slider/slider_nib.png</textureslidernibfocus>
+        <texturesliderbar colordiffuse="dialog_fg_12">primatives/square.png</texturesliderbar>
+        <textureslidernib colordiffuse="dialog_fg_30">primatives/square.png</textureslidernib>
+        <textureslidernibfocus colordiffuse="Selected">primatives/square.png</textureslidernibfocus>
     </default>
 
     <default type="sliderex">

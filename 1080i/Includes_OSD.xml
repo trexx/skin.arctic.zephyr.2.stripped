@@ -615,20 +615,16 @@
                 <midtexture colordiffuse="panel_fg_12">primatives/square.png</midtexture>
             </control>
 
-            <control type="progress" id="499">
+            <control type="progress" description="progressbar">
                 <width>100%</width>
                 <height>12</height>
                 <info>Player.Progress</info>
                 <texturebg colordiffuse="panel_fg_12">primatives/square.png</texturebg>
             </control>
 
-            <control type="progress" id="401">
+            <control type="slider" id="401" description="seekbar">
                 <width>100%</width>
                 <height>12</height>
-                <animation effect="fade" start="100" end="0" condition="!Player.Seeking" reversible="false" delay="300" time="0">Conditional</animation>
-                <animation effect="fade" start="0" end="100" condition="Player.Seeking" reversible="false" time="0">Conditional</animation>
-                <texturebg colordiffuse="00ffffff">primatives/square.png</texturebg>
-                <midtexture colordiffuse="00ffffff" diffuse="progress/diffuse.png">primatives/square.png</midtexture>
                 <visible>Player.SeekEnabled</visible>
             </control>
 
